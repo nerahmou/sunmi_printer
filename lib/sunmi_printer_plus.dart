@@ -396,11 +396,8 @@ class SunmiPrinter {
   ///This method will change the fontsize , between extra small and extra large.
   ///You can see the sizes below or in the enum file.
 
-  static Future<void> setFontSize(int _size) async {
-    Map<String, dynamic> arguments = <String, dynamic>{"size": _size};
-
-    await _channel.invokeMethod("FONT_SIZE", arguments);
-  }
+  static Future<void> setFontSize(int _size) async =>
+      await _channel.invokeMethod("FONT_SIZE", {"size": _size});
 
   ///*setCustomFontSize*
   ///
