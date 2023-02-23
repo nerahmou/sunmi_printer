@@ -34,16 +34,6 @@ public class SunmiPrinterMethod {
         public void onServiceConnected(ComponentName name, IBinder service) {
             try {
                 _woyouService = IWoyouService.Stub.asInterface(service);
-                String serviceVersion = _woyouService.getServiceVersion();
-                Toast
-                        .makeText(
-                                _context,
-                                "Sunmi Printer Service Connected. Version :" + serviceVersion,
-                                Toast.LENGTH_LONG
-                        )
-                        .show();
-
-
             } catch (RemoteException e) {
                 e.printStackTrace();
             } catch (NullPointerException e) {
