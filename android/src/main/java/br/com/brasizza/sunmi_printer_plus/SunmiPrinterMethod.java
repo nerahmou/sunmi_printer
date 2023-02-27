@@ -34,8 +34,6 @@ public class SunmiPrinterMethod {
         public void onServiceConnected(ComponentName name, IBinder service) {
             try {
                 _woyouService = IWoyouService.Stub.asInterface(service);
-            } catch (RemoteException e) {
-                e.printStackTrace();
             } catch (NullPointerException e) {
 
                 Toast
@@ -44,6 +42,8 @@ public class SunmiPrinterMethod {
                                 "Sunmi Printer Service Not Found",
                                 Toast.LENGTH_LONG
                         ).show();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
 
@@ -258,7 +258,7 @@ public class SunmiPrinterMethod {
 
     public Boolean drawerStatus() {
         try {
-            return  _woyouService.getDrawerStatus();
+            return _woyouService.getDrawerStatus();
         } catch (RemoteException e) {
             return false;
         } catch (NullPointerException e) {
@@ -268,7 +268,7 @@ public class SunmiPrinterMethod {
 
     public int timesOpened() {
         try {
-            return  _woyouService.getOpenDrawerTimes();
+            return _woyouService.getOpenDrawerTimes();
         } catch (RemoteException e) {
             return 0;
         } catch (NullPointerException e) {
@@ -450,7 +450,8 @@ public class SunmiPrinterMethod {
 
     /**
      * Show multi lines text on LCD.
-     * @param text Text lines.
+     *
+     * @param text  Text lines.
      * @param align The weight of the solid content of each line. Like flex.
      */
     public void sendLCDMultiString(

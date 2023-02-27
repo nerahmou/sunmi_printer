@@ -78,10 +78,6 @@ vector_math
 2.14
 file:///Users/dev/.pub-cache/hosted/pub.dev/vector_math-2.1.4/
 file:///Users/dev/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib/
-sunmi_printer_plus
-2.15
-file:///Users/dev/Desktop/sunmi_printer/
-file:///Users/dev/Desktop/sunmi_printer/lib/
 sky_engine
 2.12
 file:///Users/dev/dev/flutter/bin/cache/pkg/sky_engine/
@@ -94,4 +90,8 @@ flutter_test
 2.17
 file:///Users/dev/dev/flutter/packages/flutter_test/
 file:///Users/dev/dev/flutter/packages/flutter_test/lib/
+sunmi_printer_plus
+2.15
+file:///Users/dev/projects/sunmi_printer/
+file:///Users/dev/projects/sunmi_printer/lib/
 2
